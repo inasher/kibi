@@ -218,7 +218,7 @@ define(function (require) {
           const g = gridster;
 
           g.options.widget_margins = [SPACER / 2, SPACER / 2];
-          g.options.widget_base_dimensions = [($container.width() - spacerSize) / COLS, 100];
+          g.options.widget_base_dimensions = [($container.width() - spacerSize) / COLS, 50];
           g.min_widget_width  = (g.options.widget_margins[0] * 2) + g.options.widget_base_dimensions[0];
           g.min_widget_height = (g.options.widget_margins[1] * 2) + g.options.widget_base_dimensions[1];
 

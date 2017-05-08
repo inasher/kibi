@@ -1,15 +1,15 @@
-<div class="panel panel-default" ng-switch on="panel.type" ng-if="savedObj || error" data-test-subj="{{::savedObj.title}}">
+<div class="panel panel-default {{::savedObj.title.split(' ').join('-').toLowerCase()}} {{::savedObj.vis.type.title.split(' ').join('-').toLowerCase()}}" ng-switch on="panel.type" ng-if="savedObj || error" data-test-subj="{{::savedObj.title}}">
   <!--kibi: color the panel if there are selected entities-->
   <div
     class="panel-heading"
     ng-class="{selectedEntitiesDependent: markDependOnSelectedEntities && dependsOnSelectedEntities, disabled: selectedEntitiesDisabled && dependsOnSelectedEntities}">
     <span class="panel-title" title="{{::savedObj.title}}">
-      <i
+      <!--<i
         class="fa"
         ng-class="savedObj.vis.type.icon"
         aria-label="{{::savedObj.vis.type.title}} Icon"
         title="{{::savedObj.vis.type.title}}">
-      </i>
+      </i>-->
       {{::savedObj.title}}
     </span>
     <div class="btn-group">

@@ -1,3 +1,4 @@
+
 @import (reference) "~ui/styles/variables";
 @import (reference) "~ui/styles/mixins";
 
@@ -62,6 +63,15 @@ dashboard-grid {
         display: flex;
         border-top-right-radius: 0;
         border-top-left-radius: 0;
+        color: @white;
+        background-color: @gray2;
+        height: 30px;
+        line-height: 30px;
+        overflow: hidden;
+        padding: 0 10px;
+        text-transform: uppercase;
+        font-size: 14px;
+
 
         div.btn-group {
           white-space: nowrap;
@@ -79,7 +89,7 @@ dashboard-grid {
           flex: 1 1 auto;
 
           i {
-            opacity: 0.3;
+            //opacity: 0.3;
             font-size: 1.2em;
             margin-right: 4px;
           }
@@ -95,6 +105,28 @@ dashboard-grid {
           }
         }
       }
+
+      &.metric {
+        position: relative;
+        .panel-heading {
+          background-color: @gray-lighter;
+          border-top: 3px solid @gray2;
+          color: transparent;
+          font-size: 16px;
+          text-transform: capitalize;
+          a {
+            color: @gray2;
+          }
+        }
+        visualize {
+          position: static;
+          overflow-y: visible;
+        }
+        .visualize-show-spy-tab i {
+          display: none;
+        }
+      }
+
 
       .load-error {
         text-align: center;

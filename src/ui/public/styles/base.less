@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 // generic mixins
 @import (reference) "./mixins";
 @import (reference) "./variables";
@@ -5,6 +7,7 @@
 
 html,
 body {
+  font-family: "Lato", sans-serif;
   .flex-parent();
   height: 100%;
   margin: 0px;
@@ -230,11 +233,14 @@ kbn-info i {
 //== Table
 
 kbn-table, .kbn-table {
-  font-size: @font-size-small;
+  //font-size: @font-size-small;
+  text-transform: capitalize;
 
   th {
     white-space: nowrap;
     padding-right: 10px;
+    font-weight: normal;
+    color: @brand;
 
     .table-header-move, .table-header-sortchange {
       visibility: hidden;

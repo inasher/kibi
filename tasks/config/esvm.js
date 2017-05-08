@@ -24,6 +24,7 @@ module.exports = function (grunt) {
     },
     dev: {
       options: {
+        version: 'v2.4.0',
         directory: resolve(directory, 'dev'),
         config: {
           path: {
